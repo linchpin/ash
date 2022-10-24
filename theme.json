@@ -731,10 +731,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"color": "var(--wp--preset--color--contrast)",
-					"radius": "0",
-					"style": "solid",
-					"width": "1px"
+					"radius": "0"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--contrast)",
