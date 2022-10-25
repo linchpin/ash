@@ -1,9 +1,9 @@
 === Ash ===
 Contributors: aware, bgardner, ndiego
 Requires at least: 6.0
-Tested up to: 6.0
 Requires PHP: 7.4
-Stable tag: 0.9.7
+Tested up to: 6.1
+Stable tag: 0.9.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 An experimental block theme for designers, developers, and creators.
 
 == Changelog ==
+
+= 0.9.9 - 2022-10-25 =
+
+[Release Notes](https://github.com/wpengine/frost/releases/tag/v0.9.9)
+
+= 0.9.8 - 2022-07-08 =
+
+[Release Notes](https://github.com/wpengine/frost/releases/tag/v0.9.8)
 
 = 0.9.7 - 2022-05-31 =
 
