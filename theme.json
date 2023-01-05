@@ -66,45 +66,6 @@
 			"defaultDuotone": false,
 			"defaultGradients": false,
 			"defaultPalette": false,
-			"duotone": [
-				{
-					"name": "Black and Primary",
-					"slug": "black-and-primary",
-					"colors": [ "#000", "#3fc1d0" ]
-				},
-				{
-					"name": "White and Primary",
-					"slug": "white-and-primary",
-					"colors": [ "#fff", "#3fc1d0" ]
-				},
-				{
-					"name": "Black and Secondary",
-					"slug": "black-and-secondary",
-					"colors": [ "#000", "#7d58c6" ]
-				},
-				{
-					"name": "White and Secondary",
-					"slug": "white-and-secondary",
-					"colors": [ "#fff", "#7d58c6" ]
-				}
-			],
-			"gradients": [
-				{
-					"gradient": "linear-gradient(135deg,rgba(0,0,0,1) 50%,var(--wp--preset--color--primary) 100%)",
-					"name": "Black to Primary",
-					"slug": "black-primary"
-				},
-				{
-					"gradient": "linear-gradient(135deg,rgba(0,0,0,1) 50%,var(--wp--preset--color--secondary) 100%)",
-					"name": "Black to Secondary",
-					"slug": "black-secondary"
-				},
-				{
-					"gradient": "linear-gradient(135deg,rgba(0,0,0,1) 50%,var(--wp--preset--color--tertiary) 100%)",
-					"name": "Black to Tertiary",
-					"slug": "black-tertiary"
-				}
-			],
 			"palette": [
 				{
 					"name": "Primary",
