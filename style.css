@@ -26,6 +26,10 @@ Ash is distributed under the terms of the GNU GPL.
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 a,
 button,
 input:focus,
