@@ -62,7 +62,7 @@ function frost_register_block_styles()
 			'outline-base' => __('Outline Base', 'frost'),
 		),
 		'core/columns'         => array(
-			'columns-reverse' => __( 'Reverse', 'frost' ),
+			'columns-reverse' => __('Reverse', 'frost'),
 		),
 		'core/group'           => array(
 			'shadow'       => __('Shadow', 'frost'),
@@ -75,7 +75,7 @@ function frost_register_block_styles()
 			'outline' => __('Outline', 'frost'),
 		),
 		'core/social-links' => array(
-			'outline' => __( 'Outline', 'powder' ),
+			'outline' => __('Outline', 'powder'),
 		),
 	);
 
