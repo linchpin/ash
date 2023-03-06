@@ -1,8 +1,8 @@
 === Ash ===
-Contributors: aware, bgardner, ndiego
-Requires at least: 6.0
+Contributors: aware, bgardner
+Requires at least: 6.2
+Tested up to: 6.2
 Requires PHP: 7.4
-Tested up to: 6.1
 Stable tag: 0.9.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
