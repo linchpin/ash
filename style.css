@@ -244,13 +244,6 @@ ul li:where(:not([class*='block'])),
 	height: 1px;
 }
 
-/* Spacer
---------------------------------------------- */
-
-.wp-block-spacer + * {
-	margin-top: 0 !important;
-}
-
 /* Table
 --------------------------------------------- */
 
