@@ -144,7 +144,7 @@
 				"one": 1
 			},
 			"spacing": {
-				"outer": "30px"
+				"gap": "30px"
 			}
 		},
 		"layout": {
@@ -451,7 +451,7 @@
 					"background": "var(--wp--preset--color--contrast)",
 					"text": "var(--wp--preset--color--base)"
 				},
-				"css": "& code {overflow-wrap: normal; overflow-x: scroll; tab-size: 4; white-space: pre;}",
+				"css": "& code {overflow-wrap: normal; overflow-x: scroll; tab-size: 4; white-space: pre !important;}",
 				"spacing": {
 					"padding": {
 						"bottom": "25px",
@@ -516,6 +516,13 @@
 					}
 				}
 			},
+			"core/list": {
+				"spacing": {
+					"padding": {
+						"left": "var(--wp--custom--spacing--gap)"
+					}
+				}
+			},
 			"core/navigation": {
 				"elements": {
 					"link": {
@@ -537,6 +544,9 @@
 					"margin": "0"
 				}
 			},
+			"core/post-comments-form": {
+				"css": "& input[type=submit] {width: auto;}"
+			},
 			"core/post-template": {
 				"css": "& .wp-block-post:not(:last-of-type) {margin-bottom: var(--wp--preset--spacing--medium);}"
 			},
@@ -545,7 +555,7 @@
 					"background": "var(--wp--preset--color--contrast)",
 					"text": "var(--wp--preset--color--base)"
 				},
-				"css": "{overflow-wrap: normal; overflow-x: scroll; tab-size: 4; white-space: pre;}",
+				"css": "{overflow-wrap: normal; overflow-x: scroll; tab-size: 4; white-space: pre !important;}",
 				"spacing": {
 					"padding": {
 						"bottom": "25px",
