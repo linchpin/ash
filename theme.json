@@ -524,6 +524,9 @@
 						}
 					}
 				},
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--x-small)"
+				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"
 				}
