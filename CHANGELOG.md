@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/linchpin/ash/compare/v1.0.0...v1.0.1) (2023-04-28)
+
+
+### Miscellaneous Chores
+
+* **NO-JIRA:** Updating code scanning ([15a0892](https://github.com/linchpin/ash/commit/15a08926ead6d0e98a2cd3c0d5cdf77890a1855d))
+
 ## 1.0.0 (2023-04-28)
 
 
