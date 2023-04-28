@@ -1,10 +1,21 @@
 on:
-  pull_request:
-    branches-ignore:
+  push:
+    branches:
+      - main
+      - trunk
       # Do not run on auto submitted branches
-      - '**-phpcbf'
-      - 'renovate/'
-      - 'dependabot/'
+      - '!**-phpcbf'
+      - '!renovate/**'
+      - '!dependabot/**'
+    paths:
+      - .github/workflows/phpcs.yml
+      - '**.php'
+  pull_request:
+    branches:
+      # Do not run on auto submitted branches
+      - '!**-phpcbf'
+      - '!renovate/**'
+      - '!dependabot/**'
     paths:
       - '**.php'
 
