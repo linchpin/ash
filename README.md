@@ -1,8 +1,4 @@
-# Frost
-
-The ultimate WordPress theme for website builders.
-
-![Frost WordPress Theme](https://user-images.githubusercontent.com/486261/224737575-6045a830-6ef7-4551-a887-82d6228b1530.jpg)
+# Ash a layering of features on top of Frost by WP Engine
 
 ## About
 

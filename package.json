@@ -1,0 +1,48 @@
+{
+  "name": "@linchpin/ash",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "prepare": "husky install"
+  },
+  "author": "Linchpin <sayhi@linchpin.com>",
+  "license": "proprietary",
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@wordpress/scripts": "^26.3.0",
+    "autoprefixer": "^10.4.14",
+    "commitlint-config-jira": "^1.6.4",
+    "commitlint-plugin-jira-rules": "^1.6.4",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "husky": "^8.0.3",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.2.4",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "webpack-cli": "^5.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linchpin/linchpin-mmxxiii.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linchpin/linchpin-mmxxiii/issues",
+    "email": "dev@linchpin.com"
+  },
+  "engines": {
+    "node": ">=v18.0"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commit-msg"
+    }
+  }
+}

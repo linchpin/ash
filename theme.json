@@ -7,6 +7,14 @@
 			"title": "Blank"
 		},
 		{
+			"name": "leftmenu",
+			"title": "Page (Left Menu)",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
 			"name": "no-title",
 			"title": "No Title"
 		}
@@ -76,19 +84,69 @@
 			],
 			"palette": [
 				{
-					"color": "#ffffff",
-					"name": "Base",
-					"slug": "base"
-				},
-				{
-					"color": "#000000",
-					"name": "Contrast",
-					"slug": "contrast"
-				},
-				{
-					"color": "#0000ff",
 					"name": "Primary",
-					"slug": "primary"
+					"slug": "primary",
+					"color": "#3fc1d0"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "#7d58c6"
+				},
+				{
+					"name": "Tertiary",
+					"slug": "tertiary",
+					"color": "#3aa1ce"
+				},
+				{
+					"name": "Magenta",
+					"slug": "magenta",
+					"color": "#e5336a"
+				},
+				{
+					"name": "Green",
+					"slug": "green",
+					"color": "#8fca52"
+				},
+				{
+					"name": "Violet",
+					"slug": "violet",
+					"color": "#7d58c6"
+				},
+				{
+					"name": "White",
+					"slug": "base",
+					"color": "#ffffff"
+				},
+				{
+					"name": "Lightest Gray",
+					"slug": "lightest-gray",
+					"color": "#fafafa"
+				},
+				{
+					"name": "Light Gray",
+					"slug": "light-gray",
+					"color": "#d9d9d9"
+				},
+				{
+					"name": "Gray",
+					"slug": "gray",
+					"color": "#8e949a"
+				},
+				{
+					"name": "Medium Gray",
+					"slug": "medium-gray",
+					"color": "#646c76"
+				},
+				{
+					"name": "Off Black",
+					"slug": "off-black",
+					"color": "#001e1e"
+				},
+				{
+					"name": "True Black",
+					"slug": "main",
+					"color": "#000000"
 				},
 				{
 					"color": "#000099",
@@ -110,8 +168,6 @@
 				"regular": 400,
 				"medium": 500,
 				"semi-bold": 600,
-				"bold": 700,
-				"extra-bold": 800,
 				"black": 900
 			},
 			"lineHeight": {
@@ -170,17 +226,128 @@
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Outfit, sans-serif",
-					"name": "Outfit",
+					"fontFamily": "Gilmer-Regular, sans-serif",
+					"name": "Gilmer Regular",
 					"slug": "primary",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Outfit",
+							"fontFamily": "Gilmer-Regular",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [ "file:./assets/fonts/Outfit-Variable.woff2" ]
+							"fontWeight": "normal",
+							"src": [
+								"file:./assets/fonts/gilmer-regular.eot",
+								"file:./assets/fonts/gilmer-regular.woff2",
+								"file:./assets/fonts/gilmer-regular.woff",
+								"file:./assets/fonts/gilmer-regular.ttf",
+								"file:./assets/fonts/gilmer-regular.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Gilmer-Light, sans-serif",
+					"name": "Gilmer Light",
+					"slug": "light",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Gilmer-Light",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "normal",
+							"src": [
+								"file:./assets/fonts/gilmer-light.eot",
+								"file:./assets/fonts/gilmer-light.woff2",
+								"file:./assets/fonts/gilmer-light.woff",
+								"file:./assets/fonts/gilmer-light.ttf",
+								"file:./assets/fonts/gilmer-light.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Gilmer-Medium, sans-serif",
+					"name": "Gilmer Medium",
+					"slug": "medium",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Gilmer-Medium",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/fonts/gilmer-medium.eot",
+								"file:./assets/fonts/gilmer-medium.woff2",
+								"file:./assets/fonts/gilmer-medium.woff",
+								"file:./assets/fonts/gilmer-medium.ttf",
+								"file:./assets/fonts/gilmer-medium.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Gilmer-Bold, sans-serif",
+					"name": "Gilmer Bold",
+					"slug": "bold",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Gilmer-Bold",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "normal",
+							"src": [
+								"file:./assets/fonts/gilmer-bold.eot",
+								"file:./assets/fonts/gilmer-bold.woff2",
+								"file:./assets/fonts/gilmer-bold.woff",
+								"file:./assets/fonts/gilmer-bold.ttf",
+								"file:./assets/fonts/gilmer-bold.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Gilmer-Heavy, sans-serif",
+					"name": "Gilmer Heavy",
+					"slug": "heavy",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Gilmer-Heavy",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "normal",
+							"src": [
+								"file:./assets/fonts/gilmer-heavy.eot",
+								"file:./assets/fonts/gilmer-heavy.woff2",
+								"file:./assets/fonts/gilmer-heavy.woff",
+								"file:./assets/fonts/gilmer-heavy.ttf",
+								"file:./assets/fonts/gilmer-heavy.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Gilmer-Outline, sans-serif",
+					"name": "Gilmer Outline",
+					"slug": "outline",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Gilmer-Outline",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "normal",
+							"src": [
+								"file:./assets/fonts/gilmer-outline.eot",
+								"file:./assets/fonts/gilmer-outline.woff2",
+								"file:./assets/fonts/gilmer-outline.woff",
+								"file:./assets/fonts/gilmer-outline.ttf",
+								"file:./assets/fonts/gilmer-outline.woff2"
+							]
 						}
 					]
 				},
@@ -268,7 +435,41 @@
 				}
 			]
 		},
-		"useRootPaddingAwareAlignments": true
+
+    "blocks": {
+      "core/heading": {
+        "typography": {
+          "fontSizes": [
+            {
+              "name": "Eyebrow",
+              "slug": "eyebrow",
+              "size": "14px"
+            }
+          ]
+        }
+      },
+      "core/paragraph": {
+        "typography": {
+          "fontSizes": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "size": "14px"
+            },
+            {
+              "name": "Large",
+              "slug": "large",
+              "size": "20px"
+            },
+            {
+              "name": "Subhead",
+              "slug": "subhead",
+              "size": "32px"
+            }
+          ]
+        }
+      }
+    }
 	},
 	"styles": {
 		"blocks": {
