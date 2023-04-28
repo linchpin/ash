@@ -19,7 +19,9 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
+          command: manifest
           release-type: php
+          package-name: ash
           bump-minor-pre-major: true
           token: ${{ secrets.GH_BOT_TOKEN }}
           versioning-strategy: always-bump-patch
