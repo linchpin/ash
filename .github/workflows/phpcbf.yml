@@ -14,32 +14,23 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          coverage: none
-          tools: cs2pr, composer
-
-      - name: Get composer cache directory
-        id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
-      - name: Cache dependencies
+      - name: Cache Composer dependencies
         uses: actions/cache@v3
         with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: ${{ runner.os }}-composer-
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-dev
+      - name: Composer Install
+        uses: php-actions/composer@v6
+        with:
+          working_dir: ./
+          php_version: 7.4
 
       # Check the code-style consistency of the PHP files.
       - name: Fix PHP code style
         id: codestyle
         continue-on-error: true
-        run: ./vendor/squizlabs/php_codesniffer/bin/phpcbf . --standard=./phpcs.xml
+        run: ./vendor/squizlabs/php_codesniffer/bin/phpcbf ./ --standard=./phpcs.xml
 
       - name: Get Branch Names
         id: branch
