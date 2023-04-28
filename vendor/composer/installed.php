@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'linchpin/themes',
-        'pretty_version' => 'dev-merge/upstream',
-        'version' => 'dev-merge/upstream',
-        'reference' => '1540f1d707d943c6449ecb64e12d1e91c4814bc2',
+        'pretty_version' => 'dev-merge/upstream-phpcbf',
+        'version' => 'dev-merge/upstream-phpcbf',
+        'reference' => '597fe227edd823e14e132fb1bc39cae9a260f16a',
         'type' => 'package',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -32,9 +32,9 @@
             ),
         ),
         'linchpin/themes' => array(
-            'pretty_version' => 'dev-merge/upstream',
-            'version' => 'dev-merge/upstream',
-            'reference' => '1540f1d707d943c6449ecb64e12d1e91c4814bc2',
+            'pretty_version' => 'dev-merge/upstream-phpcbf',
+            'version' => 'dev-merge/upstream-phpcbf',
+            'reference' => '597fe227edd823e14e132fb1bc39cae9a260f16a',
             'type' => 'package',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
