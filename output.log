@@ -1,0 +1,118 @@
+Running php-build composer
+WARNING! Your password will be stored unencrypted in /home/runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Pulling docker.pkg.github.com/linchpin/ash/php-actions_composer_ash:php-7.4-build2.1.0
+Error response from daemon: manifest unknown
+Dockerfile:
+FROM php:7.4-cli-alpine
+RUN apk add --update --no-cache zip git bash openssh
+Sending build context to Docker daemon  8.241MB
+Step 1/2 : FROM php:7.4-cli-alpine
+7.4-cli-alpine: Pulling from library/php
+ca7dd9ec2225: Pulling fs layer
+1b78b4fe0ca1: Pulling fs layer
+9d6040f2a28f: Pulling fs layer
+0e2e66b89284: Pulling fs layer
+3b1be5f02bec: Pulling fs layer
+96243f515dda: Pulling fs layer
+4006f78ca99d: Pulling fs layer
+3c76b37a5dd7: Pulling fs layer
+6491a80416fc: Pulling fs layer
+0e2e66b89284: Waiting
+3b1be5f02bec: Waiting
+96243f515dda: Waiting
+4006f78ca99d: Waiting
+6491a80416fc: Waiting
+3c76b37a5dd7: Waiting
+9d6040f2a28f: Verifying Checksum
+9d6040f2a28f: Download complete
+ca7dd9ec2225: Verifying Checksum
+ca7dd9ec2225: Download complete
+1b78b4fe0ca1: Verifying Checksum
+1b78b4fe0ca1: Download complete
+0e2e66b89284: Verifying Checksum
+0e2e66b89284: Download complete
+ca7dd9ec2225: Pull complete
+96243f515dda: Verifying Checksum
+96243f515dda: Download complete
+1b78b4fe0ca1: Pull complete
+3b1be5f02bec: Verifying Checksum
+3b1be5f02bec: Download complete
+3c76b37a5dd7: Verifying Checksum
+3c76b37a5dd7: Download complete
+9d6040f2a28f: Pull complete
+0e2e66b89284: Pull complete
+4006f78ca99d: Verifying Checksum
+4006f78ca99d: Download complete
+6491a80416fc: Verifying Checksum
+6491a80416fc: Download complete
+3b1be5f02bec: Pull complete
+96243f515dda: Pull complete
+4006f78ca99d: Pull complete
+3c76b37a5dd7: Pull complete
+6491a80416fc: Pull complete
+Digest: sha256:0d67d81f60f4a400f1b68e3a41e910c98c5e08f49e515f6855561a0f24d37852
+Status: Downloaded newer image for php:7.4-cli-alpine
+ ---> 0e3af06bf90e
+Step 2/2 : RUN apk add --update --no-cache zip git bash openssh
+ ---> Running in a68461e2222e
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/community/x86_64/APKINDEX.tar.gz
+(1/14) Installing bash (5.1.16-r2)
+Executing bash-5.1.16-r2.post-install
+(2/14) Installing expat (2.5.0-r0)
+(3/14) Installing pcre2 (10.40-r0)
+(4/14) Installing git (2.36.6-r0)
+(5/14) Installing openssh-keygen (9.0_p1-r2)
+(6/14) Installing libedit (20210910.3.1-r0)
+(7/14) Installing openssh-client-common (9.0_p1-r2)
+(8/14) Installing openssh-client-default (9.0_p1-r2)
+(9/14) Installing openssh-sftp-server (9.0_p1-r2)
+(10/14) Installing openssh-server-common (9.0_p1-r2)
+(11/14) Installing openssh-server (9.0_p1-r2)
+(12/14) Installing openssh (9.0_p1-r2)
+(13/14) Installing unzip (6.0-r9)
+(14/14) Installing zip (3.0-r9)
+Executing busybox-1.35.0-r17.trigger
+OK: 34 MiB in 47 packages
+Removing intermediate container a68461e2222e
+ ---> 87a4a9340284
+Successfully built 87a4a9340284
+Successfully tagged docker.pkg.github.com/linchpin/ash/php-actions_composer_ash:php-7.4-build2.1.0
+The push refers to repository [docker.pkg.github.com/linchpin/ash/php-actions_composer_ash]
+b1804d537f76: Preparing
+69dccaf3bf17: Preparing
+d4a8cf9787fa: Preparing
+3467d2e41661: Preparing
+4d3b3659e3fd: Preparing
+0ec5e7e1b3c1: Preparing
+9e0d4f458c69: Preparing
+93b39fc78a34: Preparing
+5a30d9e50c50: Preparing
+e5e13b0c77cb: Preparing
+0ec5e7e1b3c1: Waiting
+9e0d4f458c69: Waiting
+93b39fc78a34: Waiting
+5a30d9e50c50: Waiting
+e5e13b0c77cb: Waiting
+69dccaf3bf17: Pushed
+4d3b3659e3fd: Pushed
+d4a8cf9787fa: Pushed
+b1804d537f76: Pushed
+9e0d4f458c69: Pushed
+93b39fc78a34: Pushed
+0ec5e7e1b3c1: Pushed
+3467d2e41661: Pushed
+5a30d9e50c50: Pushed
+e5e13b0c77cb: Pushed
+php-7.4-build2.1.0: digest: sha256:90ef37fd400ffdd469d4026fa3938b1bca9ee05a1a91f7928163254fc8d74c3c size: 2413
+Docker tag: docker.pkg.github.com/linchpin/ash/php-actions_composer_ash:php-7.4-build2.1.0
+No private keys supplied
+Command: composer install --working-dir=./ --no-progress --no-interaction
+Skipping env variable PWD
+Skipping env variable HOME
+Skipping env variable SHLVL
+Skipping env variable PATH
