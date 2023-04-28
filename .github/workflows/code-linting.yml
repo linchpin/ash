@@ -1,0 +1,60 @@
+name: Code Linting - PHP
+
+on:
+  pull_request:
+    branches: [trunk]
+  push:
+    branches: [trunk]
+
+jobs:
+  lint:
+    name: Parallel lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
+      - name: Setup PHP
+        uses: shivammathur/setup-php@d30ad8b1843ace22e6698ab99bbafaa747b6bd0d # 2.24.0
+        with:
+          php-version: 7.4
+      - name: Get composer cache directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Cache composer dependencies
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+      - name: Install composer packages
+        run: composer install --no-progress
+      - name: Check for PHP errors
+        run: composer lint
+
+  phpcs_check:
+    name: PHPCS check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
+      - name: Setup PHP
+        uses: shivammathur/setup-php@d30ad8b1843ace22e6698ab99bbafaa747b6bd0d # 2.24.0
+        with:
+          php-version: 7.4
+      - name: Get composer cache directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Cache composer dependencies
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+      - name: Install composer packages
+        run: composer install --no-progress
+      - name: Check PHP coding standards using PHPCS
+        run: composer standards:check -- --runtime-set ignore_warnings_on_exit true --runtime-set testVersion 5.8-
