@@ -70,51 +70,14 @@ jobs:
       - name: Create Sync Zip
         run: |
           cd ./zip
-          zip -r ../linchpin-mmxxiii.zip ./
+          zip -r ../ash.zip ./
           cd ../
 
       - name: Upload files to a GitHub release
         uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: linchpin-mmxxiii.zip
+          file: ash.zip
           tag: ${{ steps.get_version.outputs.tag }}
-          name: linchpin-mmxxiii.zip
+          name: ash.zip
           overwrite: true
-
-      - name: Configure SSH Connection with WP Engine
-        run: |
-          SSH_PATH="$HOME/.ssh"
-          KNOWN_HOSTS_PATH="$SSH_PATH/known_hosts"
-          SSH_KEY_PRIVATE_PATH="$SSH_PATH/github_action"
-          mkdir -p "$SSH_PATH"
-          ssh-keyscan -t rsa "$SSH_HOST" >> "$KNOWN_HOSTS_PATH"
-          # Copy Secret Keys to container
-          echo "$SSH_KEY" > "$SSH_KEY_PRIVATE_PATH"
-
-          chmod 700 "$SSH_PATH"
-          chmod 644 "$KNOWN_HOSTS_PATH"
-          chmod 600 "$SSH_KEY_PRIVATE_PATH"
-          cat >>~/.ssh/config <<END
-          Host wpengine
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile $SSH_KEY_PRIVATE_PATH
-            StrictHostKeyChecking no
-          END
-        env:
-          SSH_USER: 'providence'
-          SSH_KEY: ${{ secrets.PRIVATE_KEY }}
-          SSH_HOST: "providence.ssh.wpengine.net"
-
-      - name: Upload Assets
-        id: upload_assets
-        run: |
-          SSH_PATH="$HOME/.ssh"
-          KNOWN_HOSTS_PATH="$SSH_PATH/known_hosts"
-          SSH_KEY_PRIVATE_PATH="$SSH_PATH/github_action"
-          rsync --rsh="ssh -p 22 -i $SSH_KEY_PRIVATE_PATH -o StrictHostKeyChecking=no" -zrxc --progress "./linchpin-mmxxiii.zip" "providence@providence.ssh.wpengine.net:~/sites/providence/_wpeprivate"
-
-      - name: Automatically install release on linchpin.com
-        run: |
-          ssh wpengine "cd ~/sites/providence && wp theme install ~/sites/providence/_wpeprivate/linchpin-mmxxiii.zip --force"
