@@ -30,7 +30,8 @@ jobs:
       - name: Fix PHP code style
         id: codestyle
         continue-on-error: true
-        run: ./vendor/squizlabs/php_codesniffer/bin/phpcbf ./ --standard=./phpcs.xml
+        run : |
+          ./vendor/squizlabs/php_codesniffer/bin/phpcbf ./ --standard=./phpcs.xml
 
       - name: Get Branch Names
         id: branch
