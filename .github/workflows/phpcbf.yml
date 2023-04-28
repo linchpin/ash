@@ -1,0 +1,50 @@
+on:
+  pull_request:
+    branches: [trunk]
+  push:
+    branches: [trunk]
+
+name: WordPress Autofixer
+
+jobs:
+  phpcbf-fixer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          coverage: none
+          tools: cs2pr
+
+      # Install dependencies and handle caching in one go.
+      # @link https://github.com/marketplace/actions/install-composer-dependencies
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v1"
+
+      # Check the code-style consistency of the PHP files.
+      - name: Fix PHP code style
+        id: codestyle
+        continue-on-error: true
+        run: ./vendor/squizlabs/php_codesniffer/bin/phpcbf . --standard=./phpcs.xml
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GH_BOT_TOKEN }}
+          commit-message: PHPCBF Auto Fix
+          committer: Linchpin Bot <dev@linchpin.com>
+          signoff: false
+          branch: ${{ github.event.pull_request.head.ref }}-phpcbf
+          delete-branch: true
+          title: 'Auto Fix Formatting'
+          body: |
+            Update Code Formatting
+          labels: |
+            phpcs
+            automated pr

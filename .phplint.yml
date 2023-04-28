@@ -1,0 +1,15 @@
+path: ./
+jobs: 10
+cache: build/phplint.cache
+extensions:
+  - php
+exclude:
+  - vendor
+  - .deployment
+  - .github
+  - cache
+  - .husky
+  - js
+  - css
+  - wiki
+warning: true

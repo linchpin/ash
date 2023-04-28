@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file adds functions to the Frost WordPress theme.
  *
@@ -8,7 +9,7 @@
  * @link    https://frostwp.com/
  */
 
-if ( ! function_exists( 'frost_setup' ) ) {
+if (!function_exists('frost_setup')) {
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -21,10 +22,11 @@ if ( ! function_exists( 'frost_setup' ) ) {
 	 *
 	 * @return void
 	 */
-	function frost_setup() {
+	function frost_setup()
+	{
 
 		// Make theme available for translation.
-		load_theme_textdomain( 'frost', get_template_directory() . '/languages' );
+		load_theme_textdomain('frost', get_template_directory() . '/languages');
 
 		// Enqueue editor styles and fonts.
 		add_editor_style(
@@ -34,17 +36,16 @@ if ( ! function_exists( 'frost_setup' ) ) {
 		);
 
 		// Remove core block patterns.
-		remove_theme_support( 'core-block-patterns' );
+		remove_theme_support('core-block-patterns');
 	}
-
 }
-add_action( 'after_setup_theme', 'frost_setup' );
+add_action('after_setup_theme', 'frost_setup');
 
 // Enqueue style sheet.
-add_action( 'wp_enqueue_scripts', 'frost_enqueue_style_sheet' );
-function frost_enqueue_style_sheet() {
-	wp_enqueue_style( 'ash', get_template_directory_uri() . '/css/ash.css', [], wp_get_theme()->get( 'Version' ) );
-
+add_action('wp_enqueue_scripts', 'frost_enqueue_style_sheet');
+function frost_enqueue_style_sheet()
+{
+	wp_enqueue_style('ash', get_template_directory_uri() . '/css/ash.css', [], wp_get_theme()->get('Version'));
 }
 
 /**
@@ -52,37 +53,34 @@ function frost_enqueue_style_sheet() {
  *
  * @since 0.9.2
  */
-function frost_register_block_styles() {
+function frost_register_block_styles()
+{
 
 	$block_styles = array(
 		'core/button'          => array(
-			'fill-base'    => __( 'Fill Base', 'frost' ),
-			'outline-base' => __( 'Outline Base', 'frost' ),
+			'fill-base'    => __('Fill Base', 'frost'),
+			'outline-base' => __('Outline Base', 'frost'),
+		),
+		'core/columns'         => array(
+			'columns-reverse' => __('Reverse', 'frost'),
 		),
 		'core/group'           => array(
-			'shadow'       => __( 'Shadow', 'frost' ),
-			'shadow-solid' => __( 'Shadow Solid', 'frost' ),
-			'full-height'  => __( 'Full-height', 'frost' ),
-		),
-		'core/image'           => array(
-			'shadow' => __( 'Shadow', 'frost' ),
+			'shadow'       => __('Shadow', 'frost'),
+			'shadow-solid' => __('Shadow Solid', 'frost'),
 		),
 		'core/list'            => array(
-			'no-disc' => __( 'No Disc', 'frost' ),
-		),
-		'core/media-text'      => array(
-			'shadow-media' => __( 'Shadow', 'frost' ),
+			'no-disc' => __('No Disc', 'frost'),
 		),
 		'core/navigation-link' => array(
-			'fill'         => __( 'Fill', 'frost' ),
-			'fill-base'    => __( 'Fill Base', 'frost' ),
-			'outline'      => __( 'Outline', 'frost' ),
-			'outline-base' => __( 'Outline Base', 'frost' ),
+			'outline' => __('Outline', 'frost'),
+		),
+		'core/social-links' => array(
+			'outline' => __('Outline', 'frost'),
 		),
 	);
 
-	foreach ( $block_styles as $block => $styles ) {
-		foreach ( $styles as $style_name => $style_label ) {
+	foreach ($block_styles as $block => $styles) {
+		foreach ($styles as $style_name => $style_label) {
 			register_block_style(
 				$block,
 				array(
@@ -93,49 +91,50 @@ function frost_register_block_styles() {
 		}
 	}
 }
-add_action( 'init', 'frost_register_block_styles' );
+add_action('init', 'frost_register_block_styles');
 
 /**
  * Registers block categories, and type.
  *
  * @since 0.9.2
  */
-function frost_register_block_pattern_categories() {
+function frost_register_block_pattern_categories()
+{
 
 	/* Functionality specific to the Block Pattern Explorer plugin. */
-	if ( function_exists( 'register_block_pattern_category_type' ) ) {
-		register_block_pattern_category_type( 'frost', array( 'label' => __( 'Frost', 'frost' ) ) );
+	if (function_exists('register_block_pattern_category_type')) {
+		register_block_pattern_category_type('frost', array('label' => __('Frost', 'frost')));
 	}
 
 	$block_pattern_categories = array(
 		'frost-footer'  => array(
-			'label'         => __( 'Footer', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+			'label'         => __('Footer', 'frost'),
+			'categoryTypes' => array('frost'),
 		),
 		'frost-general' => array(
-			'label'         => __( 'General', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+			'label'         => __('General', 'frost'),
+			'categoryTypes' => array('frost'),
 		),
 		'frost-header'  => array(
-			'label'         => __( 'Header', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+			'label'         => __('Header', 'frost'),
+			'categoryTypes' => array('frost'),
 		),
 		'frost-page'    => array(
-			'label'         => __( 'Page', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+			'label'         => __('Page', 'frost'),
+			'categoryTypes' => array('frost'),
 		),
 		'frost-query'   => array(
-			'label'         => __( 'Query', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+			'label'         => __('Query', 'frost'),
+			'categoryTypes' => array('frost'),
 		),
 		'frost-proposals'   => array(
-			'label'         => __( 'Proposals', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+			'label'         => __('Proposals', 'frost'),
+			'categoryTypes' => array('frost'),
 		),
 	);
 
-	foreach ( $block_pattern_categories as $name => $properties ) {
-		register_block_pattern_category( $name, $properties );
+	foreach ($block_pattern_categories as $name => $properties) {
+		register_block_pattern_category($name, $properties);
 	}
 }
-add_action( 'init', 'frost_register_block_pattern_categories', 9 );
+add_action('init', 'frost_register_block_pattern_categories', 9);

@@ -47,7 +47,16 @@
 
 	<!-- Directories and third party library exclusions. -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>vendor/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/wiki/*</exclude-pattern>
+	<exclude-pattern>/.husky/*</exclude-pattern>
+	<exclude-pattern>/.github/*</exclude-pattern>
+	<exclude-pattern>/.deployment/*</exclude-pattern>
+	<exclude-pattern>/fonts/*</exclude-pattern>
+	<exclude-pattern>/css/*</exclude-pattern>
+	<exclude-pattern>/js/*</exclude-pattern>
+	<exclude-pattern>/styles/*</exclude-pattern>
 
 	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
 	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">

@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a bug with the Frost or another theme in this repo
+description: Report a bug with the MMXXIII
 body:
     - type: textarea
       attributes:
@@ -34,7 +34,7 @@ body:
       attributes:
           label: Environment info
           description: |
-              Please list what Frost version you are using. If you are also using a Frost child theme, please note that version as well.
+              Please list what MMXXIII version you are using. If you are also using a MMXXIII child theme, please note that version as well.
           placeholder: |
             - WordPress version, Gutenberg version (if active), and active Theme you are using.
             - Browser(s) are you seeing the problem on.
@@ -46,7 +46,7 @@ body:
       id: existing
       attributes:
           label: Please confirm that you have searched existing issues in the repo.
-          description: You can do this by searching https://github.com/wpengine/themes/issues and making sure the bug is not related to something else.
+          description: You can do this by searching https://github.com/linchpin/mmxxiii/issues and making sure the bug is not related to something else.
           multiple: true
           options:
              - 'Yes'
