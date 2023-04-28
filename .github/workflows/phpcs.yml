@@ -23,6 +23,6 @@ jobs:
         env:
           GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
           SKIP_FOLDERS: ".deployment,.github,assets,.husky,css,js,lib,vendor"
-          PHPCS_STANDARD_FILE_NAME: "phpcs.xml"
+          PHPCS_STANDARD_FILE_NAME: "./phpcs.xml"
         with:
           args: "WordPress,WordPress-Core,WordPress-Extra"

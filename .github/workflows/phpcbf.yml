@@ -1,12 +1,8 @@
 on:
   pull_request:
-    branches-ignore:
-      # Do not run on auto submitted branches
-      - '**-phpcbf'
-      - 'renovate/'
-      - 'dependabot/'
-    paths:
-      - '**.php'
+    branches: [trunk]
+  push:
+    branches: [trunk]
 
 name: WordPress Autofixer
 
@@ -34,7 +30,7 @@ jobs:
       - name: Fix PHP code style
         id: codestyle
         continue-on-error: true
-        run: ./vendor/squizlabs/php_codesniffer/bin/phpcbf . --standard=${{ github.workspace }}/phpcs.xml
+        run: ./vendor/squizlabs/php_codesniffer/bin/phpcbf . --standard=./phpcs.xml
 
       - name: Create Pull Request
         id: cpr
