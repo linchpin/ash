@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.2](https://github.com/linchpin/ash/compare/v1.0.1...v1.0.2) (2023-05-01)
+
+
+### Miscellaneous Chores 🧹
+
+* **NO-JIRA:** incorrect working reference ([99c2f5b](https://github.com/linchpin/ash/commit/99c2f5b47fa335f8efe2103feebe9dce4bd2fef6))
+* **NO-JIRA:** Removing some unneeded files ([84450c7](https://github.com/linchpin/ash/commit/84450c7d1f7231a723e58aa140d79015c8a4c68b))
+* **NO-JIRA:** Update build and code scanning ([e2c6d28](https://github.com/linchpin/ash/commit/e2c6d286666788d219a6fd829394591a7f8bce3d))
+
 ## [1.0.1](https://github.com/linchpin/ash/compare/v1.0.0...v1.0.1) (2023-04-28)
 
 
