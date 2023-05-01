@@ -5,10 +5,10 @@
 		".": {
 			"release-type": "php",
 			"extra-files": [
-				"functions.php"
-				"readme.txt"
-				"CHANGELOG.md"
-				"README.md"
+				"functions.php",
+				"readme.txt",
+				"CHANGELOG.md",
+				"README.md",
 				{
 					"type": "json",
 					"path": "package.json",
