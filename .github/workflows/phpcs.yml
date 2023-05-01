@@ -9,7 +9,7 @@ on:
       - '!dependabot/**'
       - '!release-please--branches**'
     paths:
-      - .github/workflows/**
+      - '.github/workflows/**'
       - '**.php'
   pull_request:
     branches:
