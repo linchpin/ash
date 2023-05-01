@@ -5,20 +5,10 @@
 		".": {
 			"release-type": "php",
 			"extra-files": [
-				{
-					"path": "functions.php"
-				},
-				{
-					"path": "readme.txt"
-				},
-				{
-					"path": "CHANGELOG.md"
-				},
-				{
-					"path": "README.md"
-				},
-				{
-					"path": ".release-please-manifest.json"
+				"functions.php"
+				"readme.txt"
+				"CHANGELOG.md"
+				"README.md"
 				},
 				{
 					"type": "json",
