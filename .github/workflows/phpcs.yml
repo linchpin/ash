@@ -7,8 +7,9 @@ on:
       - '!**-phpcbf'
       - '!renovate/**'
       - '!dependabot/**'
+      - '!release-please--branches**'
     paths:
-      - .github/workflows/phpcs.yml
+      - .github/workflows/**
       - '**.php'
   pull_request:
     branches:
@@ -16,6 +17,7 @@ on:
       - '!**-phpcbf'
       - '!renovate/**'
       - '!dependabot/**'
+      - '!release-please--branches**'
     paths:
       - '**.php'
 
