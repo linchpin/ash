@@ -9,7 +9,6 @@
 				"readme.txt"
 				"CHANGELOG.md"
 				"README.md"
-				},
 				{
 					"type": "json",
 					"path": "package.json",
