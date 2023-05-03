@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/linchpin/linchpin-mmxxiii.git"
+    "url": "https://github.com/linchpin/ash.git"
   },
   "bugs": {
-    "url": "https://github.com/linchpin/linchpin-mmxxiii/issues",
+    "url": "https://github.com/linchpin/ash/issues",
     "email": "dev@linchpin.com"
   },
   "engines": {

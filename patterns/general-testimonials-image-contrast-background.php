@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Testimonials with text, image.
- * Slug: frost/general-testimonials-image-contrast-background
+ * Slug: ash/general-testimonials-image-contrast-background
  * Categories: testimonials
  */
 ?>
@@ -12,7 +12,7 @@
 <p class="has-max-72-font-size" style="line-height:1">“</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}}}} -->
-<p style="margin-top:0"><?php echo esc_html__( 'With its clean, minimal design and powerful features, Frost enables agencies to build cool websites.', 'frost' ); ?></p>
+<p style="margin-top:0"><?php echo esc_html__( 'With its clean, minimal design and powerful features, Ash enables agencies to build cool websites.', 'ash' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":299,"width":60,"height":60,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"50px"}},"className":"is-style-rounded"} -->
@@ -33,7 +33,7 @@
 <p class="has-max-72-font-size" style="line-height:1">“</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}}}} -->
-<p style="margin-top:0"><?php echo esc_html__( 'With its clean, minimal design and powerful features, Frost enables agencies to build cool websites.', 'frost' ); ?></p>
+<p style="margin-top:0"><?php echo esc_html__( 'With its clean, minimal design and powerful features, Ash enables agencies to build cool websites.', 'ash' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":299,"width":60,"height":60,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"50px"}},"className":"is-style-rounded"} -->
@@ -54,7 +54,7 @@
 <p class="has-max-72-font-size" style="line-height:1">“</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}}}} -->
-<p style="margin-top:0"><?php echo esc_html__( 'With its clean, minimal design and powerful features, Frost enables agencies to build cool websites.', 'frost' ); ?></p>
+<p style="margin-top:0"><?php echo esc_html__( 'With its clean, minimal design and powerful features, Ash enables agencies to build cool websites.', 'ash' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":299,"width":60,"height":60,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"50px"}},"className":"is-style-rounded"} -->

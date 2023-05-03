@@ -5,3 +5,4 @@ Dockerfile-php-build
 docker_tag
 output.log
 .DS_Store
+/.idea/

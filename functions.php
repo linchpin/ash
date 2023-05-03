@@ -1,15 +1,16 @@
 <?php
-
 /**
- * This file adds functions to the Frost WordPress theme.
+ * This file adds functions to the Ash WordPress theme.
  *
- * @package Frost
- * @author  WP Engine
+ * It is built on top of ash, a theme by WP Engine.
+ *
+ * @package Ash
+ * @author  Linchpin
  * @license GNU General Public License v2 or later
- * @link    https://frostwp.com/
+ * @link    https://github.com/linchpin/ash/
  */
 
-if ( ! function_exists( 'frost_setup' ) ) {
+if ( ! function_exists( 'ash_setup' ) ) {
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -22,9 +23,9 @@ if ( ! function_exists( 'frost_setup' ) ) {
 	 *
 	 * @return void
 	 */
-	function frost_setup() {
+	function ash_setup() {
 		// Make theme available for translation.
-		load_theme_textdomain( 'frost', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'ash', get_template_directory() . '/languages' );
 
 		// Enqueue editor styles and fonts.
 		add_editor_style(
@@ -37,11 +38,11 @@ if ( ! function_exists( 'frost_setup' ) ) {
 		remove_theme_support( 'core-block-patterns' );
 	}
 }
-add_action( 'after_setup_theme', 'frost_setup' );
+add_action( 'after_setup_theme', 'ash_setup' );
 
 // Enqueue style sheet.
-add_action( 'wp_enqueue_scripts', 'frost_enqueue_style_sheet' );
-function frost_enqueue_style_sheet() {
+add_action( 'wp_enqueue_scripts', 'ash_enqueue_style_sheet' );
+function ash_enqueue_style_sheet() {
 	wp_enqueue_style( 'ash', get_template_directory_uri() . '/css/ash.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 
@@ -50,27 +51,27 @@ function frost_enqueue_style_sheet() {
  *
  * @since 0.9.2
  */
-function frost_register_block_styles() {
+function ash_register_block_styles() {
 	$block_styles = array(
 		'core/button'          => array(
-			'fill-base'    => __( 'Fill Base', 'frost' ),
-			'outline-base' => __( 'Outline Base', 'frost' ),
+			'fill-base'    => __( 'Fill Base', 'ash' ),
+			'outline-base' => __( 'Outline Base', 'ash' ),
 		),
 		'core/columns'         => array(
-			'columns-reverse' => __( 'Reverse', 'frost' ),
+			'columns-reverse' => __( 'Reverse', 'ash' ),
 		),
 		'core/group'           => array(
-			'shadow'       => __( 'Shadow', 'frost' ),
-			'shadow-solid' => __( 'Shadow Solid', 'frost' ),
+			'shadow'       => __( 'Shadow', 'ash' ),
+			'shadow-solid' => __( 'Shadow Solid', 'ash' ),
 		),
 		'core/list'            => array(
-			'no-disc' => __( 'No Disc', 'frost' ),
+			'no-disc' => __( 'No Disc', 'ash' ),
 		),
 		'core/navigation-link' => array(
-			'outline' => __( 'Outline', 'frost' ),
+			'outline' => __( 'Outline', 'ash' ),
 		),
 		'core/social-links'    => array(
-			'outline' => __( 'Outline', 'frost' ),
+			'outline' => __( 'Outline', 'ash' ),
 		),
 	);
 
@@ -86,43 +87,43 @@ function frost_register_block_styles() {
 		}
 	}
 }
-add_action( 'init', 'frost_register_block_styles' );
+add_action( 'init', 'ash_register_block_styles' );
 
 /**
  * Registers block categories, and type.
  *
  * @since 0.9.2
  */
-function frost_register_block_pattern_categories() {
+function ash_register_block_pattern_categories() {
 	/* Functionality specific to the Block Pattern Explorer plugin. */
 	if ( function_exists( 'register_block_pattern_category_type' ) ) {
-		register_block_pattern_category_type( 'frost', array( 'label' => __( 'Frost', 'frost' ) ) );
+		register_block_pattern_category_type( 'ash', array( 'label' => __( 'Ash', 'ash' ) ) );
 	}
 
 	$block_pattern_categories = array(
-		'frost-footer'    => array(
-			'label'         => __( 'Footer', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+		'ash-footer'    => array(
+			'label'         => __( 'Footer', 'ash' ),
+			'categoryTypes' => array( 'ash' ),
 		),
-		'frost-general'   => array(
-			'label'         => __( 'General', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+		'ash-general'   => array(
+			'label'         => __( 'General', 'ash' ),
+			'categoryTypes' => array( 'ash' ),
 		),
-		'frost-header'    => array(
-			'label'         => __( 'Header', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+		'ash-header'    => array(
+			'label'         => __( 'Header', 'ash' ),
+			'categoryTypes' => array( 'ash' ),
 		),
-		'frost-page'      => array(
-			'label'         => __( 'Page', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+		'ash-page'      => array(
+			'label'         => __( 'Page', 'ash' ),
+			'categoryTypes' => array( 'ash' ),
 		),
-		'frost-query'     => array(
-			'label'         => __( 'Query', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+		'ash-query'     => array(
+			'label'         => __( 'Query', 'ash' ),
+			'categoryTypes' => array( 'ash' ),
 		),
-		'frost-proposals' => array(
-			'label'         => __( 'Proposals', 'frost' ),
-			'categoryTypes' => array( 'frost' ),
+		'ash-proposals' => array(
+			'label'         => __( 'Proposals', 'ash' ),
+			'categoryTypes' => array( 'ash' ),
 		),
 	);
 
@@ -130,4 +131,5 @@ function frost_register_block_pattern_categories() {
 		register_block_pattern_category( $name, $properties );
 	}
 }
-add_action( 'init', 'frost_register_block_pattern_categories', 9 );
+
+add_action( 'init', 'ash_register_block_pattern_categories', 9 );

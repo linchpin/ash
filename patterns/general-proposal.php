@@ -2,7 +2,7 @@
 /**
  * Title: Proposal Page
  * Slug: ash/general-proposal
- * Categories: frost-proposals
+ * Categories: ash-proposals
  * Viewport Width: 1280
  */
 ?>
