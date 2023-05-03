@@ -2,7 +2,7 @@
 /**
  * Title: Project Header
  * Slug: ash/general-project-header
- * Categories: frost-proposals
+ * Categories: ash-proposals
  * Viewport Width: 1280
  */
 ?>
