@@ -11,7 +11,7 @@ namespace Ash\Core;
 use Ash\Utility;
 
 function setup() {
-	$n = function ($function) {
+	$n = function ( $function ) {
 		return __NAMESPACE__ . "\\$function";
 	};
 
@@ -30,7 +30,7 @@ function setup() {
 	add_action( 'after_setup_theme', $n( 'jetpack_scroll_settings' ) );
 	add_filter( 'infinite_scroll_js_settings', $n( 'jetpack_scroll_button' ) );
 
-	add_action( 'init', $n( 'remove_woocommerce_infinite_styles') );
+	add_action( 'init', $n( 'remove_woocommerce_infinite_styles' ) );
 	add_filter( 'script_loader_tag', $n( 'script_loader_tag' ), 10, 2 );
 
 	add_filter( 'render_block_core/shortcode', $n( 'render_block_core_shortcode' ), 10, 3, );
@@ -78,10 +78,10 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support(
 		'html5',
-		[
+		array(
 			'search-form',
 			'gallery',
-		]
+		)
 	);
 
 	add_theme_support( 'editor-styles' );
@@ -98,7 +98,7 @@ function theme_setup() {
  * @return void
  */
 function scripts() {
-	wp_enqueue_script( 'ash-js', get_stylesheet_directory_uri() . '/js/ash.js', [], wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'ash-js', get_stylesheet_directory_uri() . '/js/ash.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
 
 /**
@@ -116,7 +116,7 @@ function styles() {
  * @return void
  */
 function admin_scripts() {
-	wp_enqueue_style( 'ash-admin-css', get_stylesheet_directory_uri() . '/css/admin.css', [], wp_get_theme()->get( 'Version' )  );
+	wp_enqueue_style( 'ash-admin-css', get_stylesheet_directory_uri() . '/css/admin.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 
 /**
@@ -144,7 +144,7 @@ function js_detection() {
 function script_loader_tag( $tag, $handle ) {
 	$script_execution = wp_scripts()->get_data( $handle, 'script_execution' );
 
-	if (! $script_execution) {
+	if ( ! $script_execution ) {
 		return $tag;
 	}
 
@@ -160,8 +160,8 @@ function script_loader_tag( $tag, $handle ) {
 	}
 
 	// Add the attribute if it hasn't already been added.
-	if ( ! preg_match(":\s$script_execution(=|>|\s):", $tag ) ) {
-		$tag = preg_replace(':(?=></script>):', " $script_execution", $tag, 1);
+	if ( ! preg_match( ":\s$script_execution(=|>|\s):", $tag ) ) {
+		$tag = preg_replace( ':(?=></script>):', " $script_execution", $tag, 1 );
 	}
 
 	return $tag;
@@ -174,22 +174,25 @@ function script_loader_tag( $tag, $handle ) {
  * @return void
  */
 function add_manifest() {
-	echo "<link rel='manifest' href='" . esc_url( get_stylesheet_directory_uri() . '/manifest.json') . "' />";
+	echo "<link rel='manifest' href='" . esc_url( get_stylesheet_directory_uri() . '/manifest.json' ) . "' />";
 }
 
 function jetpack_scroll_settings() {
 
-	$n = function ($function) {
+	$n = function ( $function ) {
 		return __NAMESPACE__ . "\\$function";
 	};
 
-	add_theme_support( 'infinite-scroll', array(
-		'container'      => 'infinite',
-		'type'           => 'click',
-		'footer'         => false,
-		'wrapper'        => false,
-		'render'         => $n('infinite_post_render' ),
-	) );
+	add_theme_support(
+		'infinite-scroll',
+		array(
+			'container' => 'infinite',
+			'type'      => 'click',
+			'footer'    => false,
+			'wrapper'   => false,
+			'render'    => $n( 'infinite_post_render' ),
+		)
+	);
 
 }
 
