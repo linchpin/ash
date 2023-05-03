@@ -1,5 +1,5 @@
 === Ash ===
-Contributors: aware, wpengine, bgardner
+Contributors: aware, maxinacube, wpengine, bgardner
 Requires at least: 6.2
 Tested up to: 6.2
 Requires PHP: 7.4
