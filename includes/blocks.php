@@ -35,28 +35,28 @@ function after_setup_theme() {
  * @since 1.1.0
  */
 function register_block_styles() {
-	$block_styles = [
-		'core/button'          => [
+	$block_styles = array(
+		'core/button'          => array(
 			'fill-base'    => __( 'Fill Base', 'ash' ),
 			'outline-base' => __( 'Outline Base', 'ash' ),
-		],
-		'core/columns'         => [
+		),
+		'core/columns'         => array(
 			'columns-reverse' => __( 'Reverse', 'ash' ),
-		],
-		'core/group'           => [
+		),
+		'core/group'           => array(
 			'shadow'       => __( 'Shadow', 'ash' ),
 			'shadow-solid' => __( 'Shadow Solid', 'ash' ),
-		],
-		'core/list'            => [
+		),
+		'core/list'            => array(
 			'no-disc' => __( 'No Disc', 'ash' ),
-		],
-		'core/navigation-link' => [
+		),
+		'core/navigation-link' => array(
 			'outline' => __( 'Outline', 'ash' ),
-		],
-		'core/social-links'    => [
+		),
+		'core/social-links'    => array(
 			'outline' => __( 'Outline', 'ash' ),
-		],
-	];
+		),
+	);
 
 	foreach ( $block_styles as $block => $styles ) {
 		foreach ( $styles as $style_name => $style_label ) {

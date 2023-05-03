@@ -22,17 +22,17 @@ namespace Ash\Utility;
  * @return string|array
  */
 function get_asset_info( string $slug, $attribute = null ) {
-    if ( ! file_exists( ASH_THEME_PATH . 'dist/' . $slug . '.asset.php' ) ) {
-        return null;
-    }
+	if ( ! file_exists( ASH_THEME_PATH . 'dist/' . $slug . '.asset.php' ) ) {
+		return null;
+	}
 
-    $asset = require ASH_THEME_PATH . 'dist/' . $slug . '.asset.php';
+	$asset = require ASH_THEME_PATH . 'dist/' . $slug . '.asset.php';
 
-    if ( ! empty( $attribute ) && isset( $asset[ $attribute ] ) ) {
-        return $asset[ $attribute ];
-    }
+	if ( ! empty( $attribute ) && isset( $asset[ $attribute ] ) ) {
+		return $asset[ $attribute ];
+	}
 
-    return $asset;
+	return $asset;
 }
 
 /**
@@ -46,7 +46,7 @@ function get_asset_info( string $slug, $attribute = null ) {
  * @since Fluval 1.0
  */
 function get_icon_svg( string $group, $icon, $size = 24 ): string {
-    return Ash\SVG_Icons::get_svg($group, $icon, $size);
+	return Ash\SVG_Icons::get_svg( $group, $icon, $size );
 }
 
 /**
@@ -57,36 +57,35 @@ function get_icon_svg( string $group, $icon, $size = 24 ): string {
  * @return string|void|\WP_Query
  * @since Fluval 1.0
  */
-function get_bundled_products($category_id = 0)
-{
-    if (! $category_id) {
-        return;
-    }
+function get_bundled_products( $category_id = 0 ) {
+	if ( ! $category_id ) {
+		return;
+	}
 
-    $grouped_products_args = [
-        'post_type' => 'product',
-        'tax_query' => [
-            'relation' => 'AND',
-            [
-                'taxonomy' => 'product_type',
-                'field'    => 'slug',
-                'terms'    => 'grouped',
-            ],
-            [
-                'taxonomy' => 'product_cat',
-                'field'    => 'term_id',
-                'terms'    => get_queried_object_id(),
-            ],
-        ],
-    ];
+	$grouped_products_args = array(
+		'post_type' => 'product',
+		'tax_query' => array(
+			'relation' => 'AND',
+			array(
+				'taxonomy' => 'product_type',
+				'field'    => 'slug',
+				'terms'    => 'grouped',
+			),
+			array(
+				'taxonomy' => 'product_cat',
+				'field'    => 'term_id',
+				'terms'    => get_queried_object_id(),
+			),
+		),
+	);
 
-    $grouped_products = new \WP_Query($grouped_products_args);
+	$grouped_products = new \WP_Query( $grouped_products_args );
 
-    if ($grouped_products->have_posts()) {
-        return $grouped_products;
-    } else {
-        return '';
-    }
+	if ( $grouped_products->have_posts() ) {
+		return $grouped_products;
+	} else {
+		return '';
+	}
 }
 
 /**
@@ -98,8 +97,7 @@ function get_bundled_products($category_id = 0)
  * @return void|\WP_Query
  * @since Fluval 1.0
  */
-function related_videos_articles(int $term_id = 0, int $count = 6)
-{
+function related_videos_articles( int $term_id = 0, int $count = 6 ) {
 	global $post;
 
 	if ( empty( $post ) ) {
@@ -112,23 +110,23 @@ function related_videos_articles(int $term_id = 0, int $count = 6)
 		$term_id = get_primary_term_id();
 	}
 
-	$related_posts_args = [
-		'post_type' => 'post',
+	$related_posts_args = array(
+		'post_type'      => 'post',
 		'posts_per_page' => $count,
-		'tax_query' => [
-			[
+		'tax_query'      => array(
+			array(
 				'taxonomy' => 'category',
 				'field'    => 'term_id',
 				'terms'    => $term_id,
-			]
-		],
-		'post__not_in' => [ $current_post ],
-	];
+			),
+		),
+		'post__not_in'   => array( $current_post ),
+	);
 
 	$related_posts = new \WP_Query( $related_posts_args );
 
 	if ( $related_posts->have_posts() ) {
-		get_template_part('partials/swiper/related-slider', null, [ 'posts' => $related_posts->posts ] );
+		get_template_part( 'partials/swiper/related-slider', null, array( 'posts' => $related_posts->posts ) );
 	}
 }
 
@@ -177,7 +175,7 @@ function get_primary_term_id( string $category = 'category', int $post_id = 0 ) 
 			}
 		}
 	}
-	
+
 	return $primary_term_id;
 }
 
@@ -247,7 +245,12 @@ function get_paginated_links( $prev_text = '&laquo;', $next_text = '&raquo;' ) {
 function fluval_cart_link() {
 	$off_canvas_trigger = ( ! is_cart() && ! is_checkout() ) ? 'off-canvas-trigger' : '';
 	?>
-	<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" id="cart-flyout-trigger" class="cart-flyout-trigger <?php echo esc_html( $off_canvas_trigger ); ?> has-text-white" <?php if ( ! is_page( 'cart' ) && ! is_page( 'checkout' ) ) echo 'data-off-canvas="cart-flyout"'; ?> title="<?php esc_attr_e( 'View your shopping cart', 'fluval' ); ?>">
+	<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" id="cart-flyout-trigger" class="cart-flyout-trigger <?php echo esc_html( $off_canvas_trigger ); ?> has-text-white" 
+						<?php
+						if ( ! is_page( 'cart' ) && ! is_page( 'checkout' ) ) {
+							echo 'data-off-canvas="cart-flyout"';}
+						?>
+	 title="<?php esc_attr_e( 'View your shopping cart', 'fluval' ); ?>">
 		<span class="icon-cart util-link-left"></span>
 		<?php /* translators: %d: number of items in cart */ ?>
 		<span class="header-cart-count util-link-right"><?php echo sprintf( __( 'Cart (<span class="wc-cart-count update-on-ajax-cart">%d</span>)', 'fluval' ), wp_kses_data( WC()->cart->get_cart_contents_count() ) ); ?></span>
@@ -266,7 +269,7 @@ function get_video_duration( $videoID, $post_id ) {
 		return $duration;
 	}
 
-	$google_feed = wp_remote_get("https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=$videoID&key=" . YT_KEY );
+	$google_feed = wp_remote_get( "https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=$videoID&key=" . YT_KEY );
 
 	if ( is_wp_error( $google_feed ) ) {
 		return '';
@@ -284,7 +287,7 @@ function get_video_duration( $videoID, $post_id ) {
 	}
 
 	if ( is_string( $video_duration ) ) {
-		preg_match_all('/(\d+)/', $video_duration, $parts );
+		preg_match_all( '/(\d+)/', $video_duration, $parts );
 	}
 
 	if ( empty( $parts ) ) {
@@ -319,8 +322,8 @@ function fluval_get_products_images( $product = null ) {
 		global $product;
 	}
 
-	$image_ids  = [];
-	$variations = [];
+	$image_ids  = array();
+	$variations = array();
 
 	if ( ! $product ) {
 		return $image_ids;
@@ -333,19 +336,19 @@ function fluval_get_products_images( $product = null ) {
 	}
 
 	if ( ! empty( wp_get_attachment_image( $product->get_image_id() ) ) ) {
-		$default_img_id = $product->get_image_id();
+		$default_img_id               = $product->get_image_id();
 		$image_ids[ $default_img_id ] = 'default';
 	}
 
 	if ( ! empty( $variations ) ) {
 		foreach ( $variations as $variation ) {
-			$attribute_tag   = array_key_first( $variation['attributes'] );
+			$attribute_tag = array_key_first( $variation['attributes'] );
 
 			if ( empty( $attribute_tag ) ) {
 				continue;
 			}
 
-			$variation_name  = $variation['attributes'][ $attribute_tag ];
+			$variation_name = $variation['attributes'][ $attribute_tag ];
 
 			// If no label fall back to the key?
 			if ( empty( $variation_name ) ) {
