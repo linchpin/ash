@@ -63,6 +63,11 @@
 		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
+	<!-- Allow short array syntax -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax">
+		<severity>0</severity>
+	</rule>
+
 	<!-- We're not going to rename files. -->
 	<rule ref="WordPress.Files.FileName">
 		<exclude-pattern>*</exclude-pattern>
