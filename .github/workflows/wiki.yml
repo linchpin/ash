@@ -1,7 +1,6 @@
 on:
   push:
-    branches:
-      - trunk
+    branches: [trunk]
     paths:
       - .github/workflows/wiki.yml
       - '**.php'

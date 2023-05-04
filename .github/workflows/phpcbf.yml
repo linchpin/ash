@@ -1,13 +1,19 @@
 on:
   pull_request:
     branches: [trunk]
+    paths:
+      - '**.php'
   push:
     branches: [trunk]
+    paths:
+      - '**.php'
 
 name: WordPress Autofixer
 
 jobs:
   phpcbf-fixer:
+    # only run on branches not ending in -phpcbf or release-please (since it's already run)
+    if: "!contains(github.ref, '-phpcbf') && !contains(github.ref, 'release-please')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -35,7 +41,7 @@ jobs:
 
       - name: Get Branch Names
         id: branch
-        uses: tj-actions/branch-names@v5.1
+        uses: tj-actions/branch-names@v6.5
 
       - name: Create Pull Request
         id: cpr
