@@ -8,6 +8,7 @@ With its clean, minimal design and powerful feature set, Ash enables agencies to
 
 Download the latest stable release: [ash.zip](https://github.com/linchpin/ash/releases/)
 
+
 ## Requirements
 
 - WordPress 6.2+
