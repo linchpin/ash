@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: List of posts in one column.
- * Slug: frost/query
+ * Slug: ash/query
  * Inserter: false
  */
 ?>

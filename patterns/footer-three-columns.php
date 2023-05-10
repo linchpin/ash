@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer with text, links, buttons.
- * Slug: frost/footer-three-columns
+ * Slug: ash/footer-three-columns
  * Categories: footer
  * Block Types: core/template-part/footer
  */
@@ -12,7 +12,7 @@
 <p>© <?php echo esc_html( gmdate( 'Y' ) ); ?> Your Company LLC</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><a href="#"><?php echo esc_html__( 'Privacy Policy', 'frost' ); ?></a> · <a href="#"><?php echo esc_html__( 'Terms of Service', 'frost' ); ?></a> · <a href="#"><?php echo esc_html__( 'Contact Us', 'frost' ); ?></a></p>
+<p><a href="#"><?php echo esc_html__( 'Privacy Policy', 'ash' ); ?></a> · <a href="#"><?php echo esc_html__( 'Terms of Service', 'ash' ); ?></a> · <a href="#"><?php echo esc_html__( 'Contact Us', 'ash' ); ?></a></p>
 <!-- /wp:paragraph -->
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","iconBackgroundColor":"contrast","iconBackgroundColorValue":"#000","style":{"spacing":{"blockGap":"10px"}},"className":"is-style-default"} -->
 <ul class="wp-block-social-links has-icon-color has-icon-background-color is-style-default"><!-- wp:social-link {"url":"#","service":"facebook"} /-->

@@ -1,0 +1,46 @@
+{
+	"package-name": "linchpin-ash",
+	"release-type": "php",
+	"packages": {
+		".": {
+			"release-type": "php",
+			"extra-files": [
+				"functions.php",
+				"readme.txt",
+				"CHANGELOG.md",
+				"README.md",
+				{
+					"type": "json",
+					"path": "package.json",
+					"jsonpath": "$.version"
+				},
+				{
+					"type": "json",
+					"path": "composer.json",
+					"jsonpath": "$.version"
+				}
+			]
+		}
+	},
+	"bump-minor-pre-major": true,
+	"versioning-strategy": "always-bump-patch",
+	"pull-request-header": ":gem: Automated Release",
+	"include-component-in-tag": false,
+	"changelog-sections": [
+		{ "type": "feat", "section": "Features ✨" },
+		{ "type": "feature", "section": "Features ✨" },
+		{ "type": "fix", "section": "Bug Fixes 🐛" },
+		{ "type": "docs", "section": "Documentation 📚" },
+		{ "type": "style", "section": "Styles 💄" },
+		{ "type": "test", "section": "Tests 🧪" },
+		{ "type": "perf", "section": "Performance Improvements ⚡️" },
+		{ "type": "chore", "section": "Miscellaneous Chores 🧹" },
+		{ "type": "tweak", "section": "Changes to Existing Features \uD83D\uDC85" },
+		{ "type": "refactor", "section": "Changes to Existing Features \uD83D\uDC85" },
+		{ "type": "improve", "section": "Changes to Existing Features \uD83D\uDC85" },
+		{ "type": "revert", "section": "Reverts ⏪️" },
+		{ "type": "docs", "section": "Documentation", "hidden": true },
+		{ "type": "build", "section": "Build System ", "hidden": true },
+		{ "type": "ci", "section": "Continuous Integration", "hidden": true }
+	]
+}
