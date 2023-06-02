@@ -182,6 +182,21 @@
 			"contentSize": "640px",
 			"wideSize": "1200px"
 		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": [
+				{
+					"name": "Light",
+					"slug": "light",
+					"shadow": "0 0 50px rgb(0 0 0 / 10%);"
+				},
+				{
+					"name": "Solid",
+					"slug": "solid",
+					"shadow": "5px 5px currentColor"
+				}
+			]
+		},
 		"spacing": {
 			"spacingSizes": [
 				{
@@ -635,6 +650,7 @@
 					"style": "solid",
 					"width": "1px"
 				},
+				"css": "& p {margin: 0;}",
 				"spacing": {
 					"padding": "var(--wp--custom--spacing--gap)"
 				}
@@ -685,6 +701,9 @@
 						"top": "0px !important"
 					}
 				}
+			},
+			"core/term-description": {
+				"css": "& p {margin: 0;}"
 			}
 		},
 		"color": {
