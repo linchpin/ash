@@ -8,7 +8,6 @@ With its clean, minimal design and powerful feature set, Ash enables agencies to
 
 Download the latest stable release: [ash.zip](https://github.com/linchpin/ash/releases/)
 
-
 ## Requirements
 
 - WordPress 6.2+
@@ -18,8 +17,8 @@ Download the latest stable release: [ash.zip](https://github.com/linchpin/ash/re
 ## Dependencies
 
 | Dependency | Version | License        | Notes                                         |
-|------------|---------|----------------|-----------------------------------------------|
-| Frost      | 1.0.2   | GPLv2 or later | The base theme Ash was forked from            |
+| ---------- | ------- | -------------- | --------------------------------------------- |
+| Frost      | 1.0.3   | GPLv2 or later | The base theme Ash was forked from            |
 | Husky      | 7.0.2   | MIT            | Used for commit linting for linchpin projects |
 
 ## Getting Started
