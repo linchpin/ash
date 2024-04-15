@@ -41,7 +41,7 @@ jobs:
 
       - name: Get Branch Names
         id: branch
-        uses: tj-actions/branch-names@v6.5
+        uses: tj-actions/branch-names@v7.0.7
 
       - name: Create Pull Request
         id: cpr
