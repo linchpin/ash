@@ -16,10 +16,10 @@ Download the latest stable release: [ash.zip](https://github.com/linchpin/ash/re
 
 ## Dependencies
 
-| Dependency | Version | License        | Notes                                         |
-| ---------- |---------| -------------- | --------------------------------------------- |
-| Frost      | 1.0.9   | GPLv2 or later | The base theme Ash was forked from            |
-| Husky      | 9.0.2   | MIT            | Used for commit linting for linchpin projects |
+| Dependency      | Version | License       | Notes                                         |
+|-----------------|---------|---------------| --------------------------------------------- |
+| Frost           | 1.0.9   | GPLv2 or later | The base theme Ash was forked from            |
+| Husky           | 9.0.2   | MIT           | Used for commit linting for linchpin projects |
 
 ## Getting Started
 
