@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.6](https://github.com/linchpin/ash/compare/v1.0.5...v1.0.6) (2024-07-17)
+
+
+### Miscellaneous Chores 🧹
+
+* **NO-TASK:** Bump readme ([f1f1e82](https://github.com/linchpin/ash/commit/f1f1e828e09701f60383eb7d2d7c46fbe36e0414))
+
+
+### Changes to Existing Features 💅
+
+* **NO-JIRA:** Add clickable javascript ([d42ba96](https://github.com/linchpin/ash/commit/d42ba965e352774f3c65c92797376152776f5d97))
+
 ## [1.0.5](https://github.com/linchpin/ash/compare/v1.0.4...v1.0.5) (2023-05-04)
 
 
