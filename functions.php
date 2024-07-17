@@ -12,7 +12,7 @@
  */
 
 // x-release-please-start-version
-define('ASH_THEME_VERSION', '1.0.5'); // Version number is bumped automatically by release please
+define('ASH_THEME_VERSION', '1.0.6'); // Version number is bumped automatically by release please
 // x-release-please-end
 
 define('ASH_THEME_NAME', esc_html__('Ash', 'Ash'));
