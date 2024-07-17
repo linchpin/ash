@@ -1,15 +1,15 @@
 === Ash ===
 Contributors: aware, maxinacube, wpengine, bgardner
-Requires at least: 6.2
-Tested up to: 6.2
-Requires PHP: 7.4
-Stable tag: 1.0.5
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires at least: 6.6
+Tested up to: 6.6
+Requires PHP: 8.2
+Stable tag: 1.0.9
+License: GNU General Public License v3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-With its clean, minimal design and powerful feature set, Frost enables agencies to build stylish and sophisticated WordPress websites. Frost is a masterpiece of design and functionality. It features a range of valuable patterns, including hero and portfolio sections, prominent call-to-action buttons, and customer testimonials. Whether you’re building a website for your business, personal brand, or creative project, Frost is perfect for anyone looking to launch quickly and efficiently.
+With its clean, minimal design and powerful feature set, Ash enables agencies to build stylish and sophisticated WordPress websites. Ash is a masterpiece of design and functionality. It features a range of valuable patterns, including hero and portfolio sections, prominent call-to-action buttons, and customer testimonials. Whether you’re building a website for your business, personal brand, or creative project, Frost is perfect for anyone looking to launch quickly and efficiently.
 
 
 == Changelog ==

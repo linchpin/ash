@@ -4,7 +4,13 @@
   "customTemplates": [
     {
       "name": "blank",
+      "postTypes": ["page", "post"],
       "title": "Blank"
+    },
+    {
+      "name": "no-title",
+      "postTypes": ["page", "post"],
+      "title": "No Title"
     },
     {
       "name": "leftmenu",
@@ -13,10 +19,6 @@
         "page",
         "post"
       ]
-    },
-    {
-      "name": "no-title",
-      "title": "No Title"
     }
   ],
   "settings": {
@@ -125,6 +127,11 @@
       ],
       "palette": [
         {
+          "color": "#ffffff",
+          "name": "Base",
+          "slug": "base"
+        },
+        {
           "name": "Primary",
           "slug": "primary",
           "color": "#3fc1d0"
@@ -209,6 +216,8 @@
         "regular": 400,
         "medium": 500,
         "semi-bold": 600,
+        "bold": 700,
+        "extra-bold": 800,
         "black": 900
       },
       "lineHeight": {
@@ -490,7 +499,8 @@
           "slug": "max-72"
         }
       ]
-    }
+    },
+    "useRootPaddingAwareAlignments": true
   },
   "styles": {
     "blocks": {
@@ -500,7 +510,7 @@
             "border": {
               "color": "currentColor",
               "style": "solid",
-              "width": "1px"
+              "width": "2åpx"
             },
             "spacing": {
               "padding": {
@@ -596,6 +606,7 @@
         }
       },
       "core/list": {
+        "css": "&.is-style-no-disc {list-style-type: none; padding-left: 0;}",
         "spacing": {
           "padding": {
             "left": "var(--wp--custom--spacing--gap)"
@@ -621,7 +632,9 @@
         "css": "& input[type=submit] {width: auto;} & label {font-size: var(--wp--preset--font-size--x-small);}"
       },
       "core/post-template": {
-        "css": "& .wp-block-post:not(:last-of-type) {margin-bottom: var(--wp--preset--spacing--medium);}"
+        "spacing": {
+          "blockGap": "var(--wp--preset--spacing--medium);"
+        }
       },
       "core/preformatted": {
         "color": {
@@ -636,10 +649,6 @@
             "bottom": "25px",
             "left": "30px"
           }
-        },
-        "typography": {
-          "fontFamily": "var(--wp--preset--font-family--monospace)",
-          "fontSize": "var(--wp--preset--font-size--small)"
         }
       },
       "core/pullquote": {
@@ -647,6 +656,15 @@
           "color": "var(--wp--preset--color--contrast)",
           "style": "solid",
           "width": "1px"
+        },
+        "css": "& p {margin: 0;}",
+        "elements": {
+          "cite": {
+            "typography": {
+              "fontSize": "var(--wp--preset--font-size--x-small)",
+              "fontStyle": "inherit"
+            }
+          }
         },
         "spacing": {
           "padding": {
@@ -668,6 +686,14 @@
           "width": "1px"
         },
         "css": "& p {margin: 0;}",
+        "elements": {
+          "cite": {
+            "typography": {
+              "fontSize": "var(--wp--preset--font-size--x-small)",
+              "fontStyle": "inherit"
+            }
+          }
+        },
         "spacing": {
           "padding": {
             "top": "var(--wp--custom--spacing--gap)",
@@ -720,7 +746,7 @@
       "core/template-part": {
         "spacing": {
           "margin": {
-            "top": "0px !important"
+            "top": "0"
           }
         }
       },
@@ -751,7 +777,13 @@
         },
         "typography": {
           "fontSize": "var(--wp--preset--font-size--x-small)",
-          "fontWeight": "var(--wp--custom--font-weight--regular)"
+          "fontWeight": "var(--wp--custom--font-weight--regular)",
+          "lineHeight": "var(--wp--custom--line-height--medium)"
+        },
+        ":hover": {
+          "color": {
+            "background": "var(--wp--preset--color--primary)"
+          }
         }
       },
       "caption": {
@@ -810,6 +842,11 @@
       "link": {
         "color": {
           "text": "var(--wp--preset--color--contrast)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--contrast)"
+          }
         }
       }
     },
