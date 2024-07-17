@@ -52,6 +52,8 @@ if (!function_exists('ash_setup')) {
 				'./css/ash.css',
 			)
 		);
+		// Enqueue editor stylesheet.
+		add_editor_style( get_template_directory_uri() . '/style.css' );
 
 		// Remove core block patterns.
 		remove_theme_support('core-block-patterns');
@@ -62,7 +64,6 @@ if (!function_exists('ash_setup')) {
 
 add_action('after_setup_theme', 'ash_setup');
 
-// Enqueue style sheet.
 add_action('wp_enqueue_scripts', 'ash_enqueue_style_sheet');
 
 function ash_enqueue_style_sheet()
@@ -101,6 +102,12 @@ function ash_register_block_styles()
 		),
 		'core/social-links'    => array(
 			'outline' => __('Outline', 'ash'),
+		'core/quote' => array(
+			'shadow-light' => __( 'Shadow', 'ash' ),
+			'shadow-solid' => __( 'Solid', 'ash' ),
+		),
+		'core/social-links' => array(
+			'outline' => __( 'Outline', 'ash' ),
 		),
 	);
 }
@@ -124,17 +131,17 @@ function ash_register_block_pattern_categories()
 	}
 
 	register_block_pattern_category(
-		'page',
+		'ash-page',
 		array(
-			'label'       => __('Page', 'frost'),
-			'description' => __('Create a full page with multiple patterns that are grouped together.', 'frost'),
+			'label'       => __('Page', 'ash'),
+			'description' => __('Create a full page with multiple patterns that are grouped together.', 'ash'),
 		)
 	);
 	register_block_pattern_category(
-		'pricing',
+		'frost-pricing',
 		array(
-			'label'       => __('Pricing', 'frost'),
-			'description' => __('Compare features for your digital products or service plans.', 'frost'),
+			'label'       => __('Pricing', 'ash'),
+			'description' => __('Compare features for your digital products or service plans.', 'ash'),
 		)
 	);
 
@@ -164,11 +171,11 @@ function ash_register_block_pattern_categories()
 			'categoryTypes' => array('ash'),
 		),
 		'core/quote' => array(
-			'shadow-light' => __('Shadow', 'frost'),
-			'shadow-solid' => __('Solid', 'frost'),
+			'shadow-light' => __('Shadow', 'ash'),
+			'shadow-solid' => __('Solid', 'ash'),
 		),
 		'core/social-links' => array(
-			'outline' => __('Outline', 'frost'),
+			'outline' => __('Outline', 'ash'),
 		),
 	);
 

@@ -10,23 +10,23 @@ Download the latest stable release: [ash.zip](https://github.com/linchpin/ash/re
 
 ## Requirements
 
-- WordPress 6.2+
-- PHP 7.4+
-- License: [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
+- WordPress 6.5+
+- PHP 8.2+
+- License: [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Dependencies
 
-| Dependency | Version | License        | Notes                                         |
-| ---------- | ------- | -------------- | --------------------------------------------- |
-| Frost      | 1.0.3   | GPLv2 or later | The base theme Ash was forked from            |
-| Husky      | 7.0.2   | MIT            | Used for commit linting for linchpin projects |
+| Dependency      | Version | License       | Notes                                         |
+|-----------------|---------|---------------| --------------------------------------------- |
+| Frost           | 1.0.9   | GPLv2 or later | The base theme Ash was forked from            |
+| Husky           | 9.0.2   | MIT           | Used for commit linting for linchpin projects |
 
 ## Getting Started
 
 You can download the latest stable release of Ash using the link above. Alternatively, install the entire repository for development purposes:
 
 1. Set up a local WordPress development environment, we recommend using [Local](https://localwp.com/).
-2. Ensure you are using WordPress 6.2+.
+2. Ensure you are using WordPress 6.5+.
 3. Clone / download this repository into the `/wp-content/themes/` directory of your new WordPress instance.
 4. In the WordPress admin, use the Appearance > Themes screen to activate Frost.
 
