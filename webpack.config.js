@@ -12,7 +12,7 @@ module.exports = {
 	devtool: "eval-source-map",
 	entry: {
 		core: './assets/js/ash.js',
-		mmxxiii: path.resolve( __dirname, './assets/scss/ash.scss' )
+		ash: path.resolve( __dirname, './assets/scss/ash.scss' )
 	},
 	output: {
 		filename: '[name].js',

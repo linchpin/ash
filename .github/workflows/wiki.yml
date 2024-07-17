@@ -1,7 +1,6 @@
 on:
   push:
-    branches:
-      - trunk
+    branches: [trunk]
     paths:
       - .github/workflows/wiki.yml
       - '**.php'
@@ -18,6 +17,8 @@ jobs:
 
       - name: Create Wiki Markdown
         uses: php-actions/composer@v6
+        with:
+          php-version: '7.4'
 
       - name: Generate API docs
         run: |
